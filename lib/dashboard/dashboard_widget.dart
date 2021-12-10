@@ -60,7 +60,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                         'assets/images/No_way_for_Ambulance.png',
                                         width: 350,
                                         height: 400,
-                                        fit: BoxFit.fitWidth,
+                                        fit: BoxFit.cover,
                                       ),
                                     )
                                   ],
@@ -72,7 +72,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'Explore your City',
+                                        'Emergency!!',
                                         style: FlutterFlowTheme.title1.override(
                                           fontFamily: 'Lexend Deca',
                                           color: Colors.white,
@@ -91,7 +91,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                          'Find hidden Gems around your city, by exploring the curated lists of others.',
+                                          'Never wait for the time , pick the call in your fingertips..',
                                           style: FlutterFlowTheme.subtitle2
                                               .override(
                                             fontFamily: 'Lexend Deca',
@@ -184,7 +184,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'Message Friends',
+                                        'World is silent',
                                         style: FlutterFlowTheme.title1.override(
                                           fontFamily: 'Lexend Deca',
                                           color: Colors.white,
@@ -203,7 +203,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                          'Stay in the loop with trip plans, places to go and transportation.',
+                                          'Dont hide the darkest issues, We are there for your silence break!',
                                           style: FlutterFlowTheme.subtitle2
                                               .override(
                                             fontFamily: 'Lexend Deca',
@@ -284,7 +284,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                         'assets/images/logo2.png',
                                         width: 350,
                                         height: 400,
-                                        fit: BoxFit.fitWidth,
+                                        fit: BoxFit.cover,
                                       ),
                                     )
                                   ],
@@ -296,7 +296,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'Track Expenses',
+                                        'Hii Friend😁',
                                         style: FlutterFlowTheme.title1.override(
                                           fontFamily: 'Lexend Deca',
                                           color: Color(0xFF151B1E),
@@ -315,7 +315,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                          'Don’t overspend on your trip, track all your expenses within the application.',
+                                          'When you need one, you already had one!!, Mitra a friend in hand.',
                                           style: FlutterFlowTheme.subtitle2
                                               .override(
                                             fontFamily: 'Lexend Deca',
