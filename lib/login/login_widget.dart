@@ -41,10 +41,10 @@ class _LoginWidgetState extends State<LoginWidget> {
             children: [
               Align(
                 alignment: AlignmentDirectional(0.06, -0.63),
-                child: Image.network(
-                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/flutterflow_assets/ff_full_logo_light.png',
-                  width: 280,
-                  height: 100,
+                child: Image.asset(
+                  'assets/images/logo3.png',
+                  width: double.infinity,
+                  height: 300,
                   fit: BoxFit.contain,
                 ),
               ),
