@@ -46,7 +46,7 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
             )
-          : Map1Widget(),
+          : HomePageWidget(),
     );
   }
 }
