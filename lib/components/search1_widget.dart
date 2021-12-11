@@ -63,23 +63,26 @@ class _Search1WidgetState extends State<Search1Widget> {
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      FlutterFlowDropDown(
-                        options: ['Injury type'].toList(),
-                        onChanged: (val) =>
-                            setState(() => dropDownValue2 = val),
-                        width: 150,
-                        height: 50,
-                        textStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Poppins',
-                          color: FlutterFlowTheme.tertiaryColor,
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                        child: FlutterFlowDropDown(
+                          options: ['Injury type'].toList(),
+                          onChanged: (val) =>
+                              setState(() => dropDownValue2 = val),
+                          width: 150,
+                          height: 50,
+                          textStyle: FlutterFlowTheme.bodyText1.override(
+                            fontFamily: 'Poppins',
+                            color: FlutterFlowTheme.tertiaryColor,
+                          ),
+                          fillColor: Color(0x00FFFFFF),
+                          elevation: 2,
+                          borderColor: FlutterFlowTheme.tertiaryColor,
+                          borderWidth: 0,
+                          borderRadius: 0,
+                          margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                          hidesUnderline: true,
                         ),
-                        fillColor: Color(0x00FFFFFF),
-                        elevation: 2,
-                        borderColor: FlutterFlowTheme.tertiaryColor,
-                        borderWidth: 0,
-                        borderRadius: 0,
-                        margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
-                        hidesUnderline: true,
                       )
                     ],
                   )
