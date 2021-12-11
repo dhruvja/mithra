@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../components/result_widget.dart';
 
 class Map3Widget extends StatefulWidget {
   const Map3Widget({Key key}) : super(key: key);
@@ -120,7 +121,7 @@ class _Map3WidgetState extends State<Map3Widget> {
                   ),
                   Align(
                     alignment: AlignmentDirectional(-0.18, 0.97),
-                    child: Search1Widget(),
+                    child: ResultWidget(),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,

@@ -49,7 +49,7 @@ class _Search1WidgetState extends State<Search1Widget> {
                           height: 50,
                           textStyle: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
-                            color: FlutterFlowTheme.tertiaryColor,
+                            color: Colors.white,
                           ),
                           fillColor: Color(0x00FFFFFF),
                           elevation: 2,
