@@ -22,25 +22,35 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.primaryColor,
+        automaticallyImplyLeading: true,
+        actions: [],
+        centerTitle: true,
+        elevation: 4,
+      ),
       backgroundColor: FlutterFlowTheme.tertiaryColor,
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 330,
-                  height: 280,
-                  decoration: BoxDecoration(
-                    color: Color(0x00EEEEEE),
-                  ),
-                  child: SearchWidget(),
-                )
-              ],
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 330,
+                    height: 280,
+                    decoration: BoxDecoration(
+                      color: Color(0x00EEEEEE),
+                    ),
+                    child: SearchWidget(),
+                  )
+                ],
+              ),
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
