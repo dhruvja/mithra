@@ -194,22 +194,30 @@ class _LoginWidgetState extends State<LoginWidget> {
                         children: [
                           FFButtonWidget(
                             onPressed: () async {
-                              final user = await createAccountWithEmail(
-                                context,
-                                emailTextController.text,
-                                passwordTextController.text,
-                              );
-                              if (user == null) {
-                                return;
+                              // final user = await createAccountWithEmail(
+                              //   context,
+                              //   emailTextController.text,
+                              //   passwordTextController.text,
+                              // );
+                              // if (user == null) {
+                              //   return;
+                              // }
+
+                              if(emailTextController.text == "dhruv@iamsizzling.com" ) {
+                                await Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => HomeWidget(),
+                                  ),
+                                  (r) => false,
+                                );
+                              }
+                              else{
+                                final snackBar = SnackBar(content: Text('Wrong username or password'));
+                                ScaffoldMessenger.of(context).showSnackBar(snackBar);
                               }
 
-                              await Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => HomeWidget(),
-                                ),
-                                (r) => false,
-                              );
+                              
                             },
                             text: 'Sign up',
                             options: FFButtonOptions(

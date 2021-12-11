@@ -1,27 +1,23 @@
-import '../flutter_flow/flutter_flow_drop_down.dart';
+import '../components/search24_widget.dart';
 import '../flutter_flow/flutter_flow_google_map.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../components/result_widget.dart';
 
-class Map3Widget extends StatefulWidget {
-  const Map3Widget({Key key}) : super(key: key);
+class ShWidget extends StatefulWidget {
+  const ShWidget({Key key}) : super(key: key);
 
   get searchText => null;
 
   @override
-  _Map3WidgetState createState() => _Map3WidgetState();
+  _ShWidgetState createState() => _ShWidgetState();
 }
 
-class _Map3WidgetState extends State<Map3Widget> {
+class _ShWidgetState extends State<ShWidget> {
   LatLng googleMapsCenter;
   Completer<GoogleMapController> googleMapsController;
   TextEditingController textController;
-  String dropDownValue1;
-  String dropDownValue2;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -29,8 +25,6 @@ class _Map3WidgetState extends State<Map3Widget> {
     super.initState();
     textController = TextEditingController();
   }
-
-  bool _enter = false;
 
   @override
   Widget build(BuildContext context) {
@@ -235,178 +229,11 @@ class _Map3WidgetState extends State<Map3Widget> {
                         ),
                       )
                     ],
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional(0, 1),
-                    child: _enter == false ? Container(
-                      width: double.infinity,
-                      height: 220,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF161853),
-                      ),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  10, 10, 10, 10),
-                                          child: FlutterFlowDropDown(
-                                            initialOption: dropDownValue1 ??=
-                                                'Is it Accident',
-                                            options: [
-                                              'Is it Accident',
-                                              'Yes',
-                                              'No',
-                                              ''
-                                            ].toList(),
-                                            onChanged: (val) => setState(
-                                                () => dropDownValue1 = val),
-                                            width: 150,
-                                            height: 50,
-                                            textStyle: FlutterFlowTheme
-                                                .bodyText1
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                              color: FlutterFlowTheme
-                                                  .tertiaryColor,
-                                            ),
-                                            fillColor: Color(0x00FFFFFF),
-                                            elevation: 2,
-                                            borderColor:
-                                                FlutterFlowTheme.tertiaryColor,
-                                            borderWidth: 0,
-                                            borderRadius: 0,
-                                            margin:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    12, 4, 12, 4),
-                                            hidesUnderline: true,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  10, 10, 10, 10),
-                                          child: FlutterFlowDropDown(
-                                            options: [
-                                              'Injury type',
-                                              'Head',
-                                              'Heart attack',
-                                              'Ortho',
-                                              'Other emergency'
-                                            ].toList(),
-                                            onChanged: (val) => setState(
-                                                () => dropDownValue2 = val),
-                                            width: 150,
-                                            height: 50,
-                                            textStyle: FlutterFlowTheme
-                                                .bodyText1
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                              color: FlutterFlowTheme
-                                                  .tertiaryColor,
-                                            ),
-                                            fillColor: Color(0x00FFFFFF),
-                                            elevation: 2,
-                                            borderColor:
-                                                FlutterFlowTheme.tertiaryColor,
-                                            borderWidth: 0,
-                                            borderRadius: 0,
-                                            margin:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    12, 4, 12, 4),
-                                            hidesUnderline: true,
-                                          ),
-                                        )
-                                      ],
-                                    )
-                                  ],
-                                )
-                              ],
-                            ),
-                            FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
-                              },
-                              text: 'Get Current Location',
-                              icon: Icon(
-                                Icons.location_on,
-                                size: 15,
-                              ),
-                              options: FFButtonOptions(
-                                width: 300,
-                                height: 40,
-                                color: FlutterFlowTheme.primaryColor,
-                                textStyle: FlutterFlowTheme.subtitle2.override(
-                                  fontFamily: 'Poppins',
-                                  color: Colors.white,
-                                ),
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1,
-                                ),
-                                borderRadius: 12,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                              child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                  setState((){
-                                    _enter = true;
-                                  });
-                                },
-                                text: 'Search',
-                                icon: Icon(
-                                  Icons.search,
-                                  size: 15,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 300,
-                                  height: 40,
-                                  color: FlutterFlowTheme.primaryColor,
-                                  textStyle:
-                                      FlutterFlowTheme.subtitle2.override(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.white,
-                                  ),
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1,
-                                  ),
-                                  borderRadius: 12,
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                    :
-                  ResultWidget()
-                  ),
-                  
+                  )
                 ],
               ),
-            )
+            ),
+            Search24Widget()
           ],
         ),
       ),
