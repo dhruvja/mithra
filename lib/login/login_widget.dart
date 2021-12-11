@@ -1,6 +1,8 @@
+import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../home/home_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -191,8 +193,23 @@ class _LoginWidgetState extends State<LoginWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
+                            onPressed: () async {
+                              final user = await createAccountWithEmail(
+                                context,
+                                emailTextController.text,
+                                passwordTextController.text,
+                              );
+                              if (user == null) {
+                                return;
+                              }
+
+                              await Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomeWidget(),
+                                ),
+                                (r) => false,
+                              );
                             },
                             text: 'Sign up',
                             options: FFButtonOptions(
@@ -216,8 +233,23 @@ class _LoginWidgetState extends State<LoginWidget> {
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(35, 0, 0, 0),
                             child: FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
+                              onPressed: () async {
+                                final user = await signInWithEmail(
+                                  context,
+                                  emailTextController.text,
+                                  passwordTextController.text,
+                                );
+                                if (user == null) {
+                                  return;
+                                }
+
+                                await Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => HomeWidget(),
+                                  ),
+                                  (r) => false,
+                                );
                               },
                               text: 'Sign in',
                               options: FFButtonOptions(
