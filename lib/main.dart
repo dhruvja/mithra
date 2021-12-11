@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'auth/firebase_user_provider.dart';
 
-import 'backend/push_notifications/push_notifications_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import 'package:mitra/dashboard/dashboard_widget.dart';
 import 'package:mitra/home/home_widget.dart';
@@ -27,8 +26,6 @@ class _MyAppState extends State<MyApp> {
   MitraFirebaseUser initialUser;
   bool displaySplashImage = true;
 
-  final fcmTokenSub = fcmTokenUserStream.listen((_) {});
-
   @override
   void initState() {
     super.initState();
@@ -36,12 +33,6 @@ class _MyAppState extends State<MyApp> {
       ..listen((user) => initialUser ?? setState(() => initialUser = user));
     Future.delayed(
         Duration(seconds: 1), () => setState(() => displaySplashImage = false));
-  }
-
-  @override
-  void dispose() {
-    fcmTokenSub.cancel();
-    super.dispose();
   }
 
   @override
@@ -66,7 +57,7 @@ class _MyAppState extends State<MyApp> {
               ),
             )
           : currentUser.loggedIn
-              ? PushNotificationsHandler(child: HomeWidget())
+              ? HomeWidget()
               : DashboardWidget(),
     );
   }
