@@ -3,6 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
+<<<<<<< HEAD
 	<string>272938100714-ccqcu0l0os1736rkdq1o25tsamfsc2sp.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
 	<string>com.googleusercontent.apps.272938100714-ccqcu0l0os1736rkdq1o25tsamfsc2sp</string>
@@ -10,14 +11,31 @@
 	<string>AIzaSyBIyz3e-LbgnVq-NA9SnFACfNtWN5O5jyo</string>
 	<key>GCM_SENDER_ID</key>
 	<string>272938100714</string>
+=======
+	<string>612561736235-vnfdi9racq3jth3gtrv69750acpar5qf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.612561736235-vnfdi9racq3jth3gtrv69750acpar5qf</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>612561736235-l7eq7c8fbak5c9h3611o6jp0rajri4d5.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBWflcacBt8mX9Sfjw-5jiEkeqKhj-6gDw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>612561736235</string>
+>>>>>>> fc8d998ef78d1bf2dbb9367673f9ae9c5b14d204
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.flutterflow.mitra</string>
 	<key>PROJECT_ID</key>
+<<<<<<< HEAD
 	<string>emergency-a1165</string>
 	<key>STORAGE_BUCKET</key>
 	<string>emergency-a1165.appspot.com</string>
+=======
+	<string>jobista-notifs</string>
+	<key>STORAGE_BUCKET</key>
+	<string>jobista-notifs.appspot.com</string>
+>>>>>>> fc8d998ef78d1bf2dbb9367673f9ae9c5b14d204
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +47,10 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
+<<<<<<< HEAD
 	<string>1:272938100714:ios:a32f558e65650cf63d7493</string>
+=======
+	<string>1:612561736235:ios:da2c4ab9b3e02a595c106e</string>
+>>>>>>> fc8d998ef78d1bf2dbb9367673f9ae9c5b14d204
 </dict>
 </plist>

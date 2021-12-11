@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:flutter_sound/flutter_sound.dart';
-import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:intl/date_symbol_data_file.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:path_provider/path_provider.dart';
@@ -32,7 +31,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
   FlutterSoundRecorder _recorder;
   String filepath = "";
-  final audioPlayer = AssetsAudioPlayer();
   bool _play = false;
 
   void startIt() async{
