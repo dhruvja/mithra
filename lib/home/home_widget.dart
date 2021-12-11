@@ -19,7 +19,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xFFF5F5F5),
+      backgroundColor: FlutterFlowTheme.tertiaryColor,
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -33,7 +33,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                   width: 330,
                   height: 280,
                   decoration: BoxDecoration(
-                    color: Color(0xFFEEEEEE),
+                    color: Color(0x00EEEEEE),
                   ),
                   child: SearchWidget(),
                 )
@@ -55,7 +55,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                           width: 150,
                           height: 150,
                           decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: FlutterFlowTheme.tertiaryColor,
                             image: DecorationImage(
                               fit: BoxFit.cover,
                               image: Image.asset(
@@ -64,12 +64,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                             ),
                             boxShadow: [
                               BoxShadow(
-                                color: Color(0xFF0F044C),
+                                color: Color(0x000F044C),
                               )
                             ],
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
-                              color: Color(0xFF161853),
+                              color: FlutterFlowTheme.tertiaryColor,
                             ),
                           ),
                           child: Align(
@@ -93,7 +93,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                           width: 150,
                           height: 150,
                           decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: FlutterFlowTheme.tertiaryColor,
                             image: DecorationImage(
                               fit: BoxFit.fitWidth,
                               image: Image.asset(
@@ -107,7 +107,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             ],
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
-                              color: Color(0xFF161853),
+                              color: Color(0x8EF0F5F6),
                             ),
                           ),
                           child: Align(
@@ -141,9 +141,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                           width: 150,
                           height: 150,
                           decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: FlutterFlowTheme.tertiaryColor,
                             image: DecorationImage(
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                               image: Image.asset(
                                 'assets/images/albfo_3.png',
                               ).image,
@@ -155,7 +155,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             ],
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
-                              color: Color(0xFF161853),
+                              color: Color(0x00161853),
                             ),
                           ),
                           child: Align(
@@ -179,11 +179,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                           width: 150,
                           height: 150,
                           decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: FlutterFlowTheme.tertiaryColor,
                             image: DecorationImage(
                               fit: BoxFit.cover,
                               image: Image.asset(
-                                'assets/images/ml88i_4.png',
+                                'assets/images/No_way_for_Ambulance_(1).png',
                               ).image,
                             ),
                             boxShadow: [
@@ -193,9 +193,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                             ],
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
-                              color: Color(0xFF161853),
+                              color: Color(0x00161853),
                             ),
                           ),
+                          alignment:
+                              AlignmentDirectional(0, 0.6499999999999999),
                           child: Align(
                             alignment: AlignmentDirectional(0, 1),
                             child: Text(

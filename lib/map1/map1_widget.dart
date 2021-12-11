@@ -1,3 +1,4 @@
+import '../components/search1_widget.dart';
 import '../flutter_flow/flutter_flow_google_map.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -51,24 +52,12 @@ class _Map1WidgetState extends State<Map1Widget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
-                            'Hello',
+                            'MITRA',
                             style: FlutterFlowTheme.title1.override(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF090F13),
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 0, 0, 0),
-                            child: Text(
-                              '[Name]',
-                              style: FlutterFlowTheme.title1.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Color(0xFF4B39EF),
-                                fontSize: 24,
-                                fontWeight: FontWeight.w500,
-                              ),
                             ),
                           )
                         ],
@@ -79,7 +68,7 @@ class _Map1WidgetState extends State<Map1Widget> {
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                             child: Text(
-                              'Browse our listings below.',
+                              'Choose your service',
                               style: FlutterFlowTheme.bodyText2.override(
                                 fontFamily: 'Lexend Deca',
                                 color: Color(0xFF8B97A2),
@@ -102,25 +91,52 @@ class _Map1WidgetState extends State<Map1Widget> {
                 Align(
                   alignment: AlignmentDirectional(0, 0),
                   child: Container(
+                    width: double.infinity,
                     height: MediaQuery.of(context).size.height * 1,
                     decoration: BoxDecoration(),
-                    child: FlutterFlowGoogleMap(
-                      controller: googleMapsController,
-                      onCameraIdle: (latLng) => googleMapsCenter = latLng,
-                      initialLocation: googleMapsCenter ??=
-                          LatLng(13.106061, -59.613158),
-                      markerColor: GoogleMarkerColor.violet,
-                      mapType: MapType.normal,
-                      style: GoogleMapStyle.standard,
-                      initialZoom: 14,
-                      allowInteraction: true,
-                      allowZoom: true,
-                      showZoomControls: true,
-                      showLocation: true,
-                      showCompass: false,
-                      showMapToolbar: true,
-                      showTraffic: false,
-                      centerMapOnMarkerTap: true,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Container(
+                                  width: 350,
+                                  height: 600,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFEEEEEE),
+                                  ),
+                                  child: FlutterFlowGoogleMap(
+                                    controller: googleMapsController,
+                                    onCameraIdle: (latLng) =>
+                                        googleMapsCenter = latLng,
+                                    initialLocation: googleMapsCenter ??=
+                                        LatLng(13.106061, -59.613158),
+                                    markerColor: GoogleMarkerColor.violet,
+                                    mapType: MapType.normal,
+                                    style: GoogleMapStyle.standard,
+                                    initialZoom: 14,
+                                    allowInteraction: true,
+                                    allowZoom: true,
+                                    showZoomControls: true,
+                                    showLocation: true,
+                                    showCompass: false,
+                                    showMapToolbar: false,
+                                    showTraffic: false,
+                                    centerMapOnMarkerTap: true,
+                                  ),
+                                )
+                              ],
+                            ),
+                            Search1Widget()
+                          ],
+                        )
+                      ],
                     ),
                   ),
                 ),

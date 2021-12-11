@@ -172,7 +172,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   AutoSizeText(
-                    'MPH',
+                    'Hours',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.subtitle2.override(
                       fontFamily: 'Lexend Deca',
@@ -191,7 +191,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   AutoSizeText(
-                    'Battery Status',
+                    'Vehicle is out',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.subtitle2.override(
                       fontFamily: 'Lexend Deca',
@@ -245,7 +245,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                         child: Text(
-                          'Charge',
+                          'Parked',
                           style: FlutterFlowTheme.bodyText2.override(
                             fontFamily: 'Lexend Deca',
                             color: Color(0xFF8B97A2),
@@ -255,7 +255,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                         ),
                       ),
                       Text(
-                        '70%',
+                        'NO',
                         style: FlutterFlowTheme.title1.override(
                           fontFamily: 'Lexend Deca',
                           color: Colors.white,
@@ -282,7 +282,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                         ),
                       ),
                       Text(
-                        '329m',
+                        'Far',
                         style: FlutterFlowTheme.title1.override(
                           fontFamily: 'Lexend Deca',
                           color: Colors.white,
@@ -356,7 +356,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16, 8, 16, 0),
                                   child: Text(
-                                    'Put your car in park in order to turn your car off.',
+                                    'Park your vechile in stimulated location',
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Lexend Deca',
                                       color: Color(0xB3FFFFFF),
