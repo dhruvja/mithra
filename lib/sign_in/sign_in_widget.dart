@@ -1,7 +1,6 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../map1/map1_widget.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -379,13 +378,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                   ),
                 ),
                 FFButtonWidget(
-                  onPressed: () async {
-                    await Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Map1Widget(),
-                      ),
-                    );
+                  onPressed: () {
+                    print('Button pressed ...');
                   },
                   text: 'Sign in',
                   options: FFButtonOptions(

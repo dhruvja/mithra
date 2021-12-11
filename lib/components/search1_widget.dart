@@ -23,6 +23,7 @@ class _Search1WidgetState extends State<Search1Widget> {
       height: 180,
       decoration: BoxDecoration(
         color: Color(0xFF010524),
+        borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.max,

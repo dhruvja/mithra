@@ -19,6 +19,7 @@ class _SheNeeds1WidgetState extends State<SheNeeds1Widget> {
       height: 120,
       decoration: BoxDecoration(
         color: Color(0xFF010524),
+        borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.max,
