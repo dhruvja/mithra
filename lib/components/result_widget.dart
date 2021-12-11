@@ -97,7 +97,7 @@ class _ResultWidgetState extends State<ResultWidget> {
                             ),
                             prefixIcon: Icon(
                               Icons.call,
-                              color: FlutterFlowTheme.tertiaryColor,
+                              color: Color(0xFF22FFE3),
                             ),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
