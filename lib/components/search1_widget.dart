@@ -19,11 +19,11 @@ class _Search1WidgetState extends State<Search1Widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350,
+      width: double.infinity,
       height: 180,
       decoration: BoxDecoration(
         color: Color(0xFF010524),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(0),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.max,
@@ -41,7 +41,8 @@ class _Search1WidgetState extends State<Search1Widget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
                         child: FlutterFlowDropDown(
-                          options: ['Is it Accident'].toList(),
+                          initialOption: dropDownValue1 ??= 'Is it Accident',
+                          options: ['Is it Accident', 'Yes', 'No', ''].toList(),
                           onChanged: (val) =>
                               setState(() => dropDownValue1 = val),
                           width: 150,
@@ -67,7 +68,13 @@ class _Search1WidgetState extends State<Search1Widget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
                         child: FlutterFlowDropDown(
-                          options: ['Injury type'].toList(),
+                          options: [
+                            'Injury type',
+                            'Head',
+                            'Heart attack',
+                            'Ortho',
+                            'Other emergency'
+                          ].toList(),
                           onChanged: (val) =>
                               setState(() => dropDownValue2 = val),
                           width: 150,

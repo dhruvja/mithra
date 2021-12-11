@@ -81,7 +81,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ],
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                color: FlutterFlowTheme.tertiaryColor,
+                                color: Color(0xFF010524),
                               ),
                             ),
                             child: Align(
@@ -120,7 +120,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             ],
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
-                              color: Color(0x8EF0F5F6),
+                              color: Color(0xFF010524),
                             ),
                           ),
                           child: Align(
@@ -177,7 +177,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ],
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                color: Color(0x00161853),
+                                color: Color(0xFF010524),
                               ),
                             ),
                             child: Align(
@@ -225,7 +225,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ],
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                color: Color(0x00161853),
+                                color: Color(0xFF010524),
                               ),
                             ),
                             alignment:
