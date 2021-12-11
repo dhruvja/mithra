@@ -82,9 +82,10 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
 
   bool _parked = false;
   String _distance = "Far";
-  String _stats = "Yes";
+  String _stats = "No";
   String _where = "Vehicle is out";
-  int _length = 72;
+  String _park = "Car is Running";
+  int _length = 0;
 
 
   void Revert(){
@@ -94,6 +95,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
         _distance = "Home";
         _stats = "Yes";
         _where = "Vehicle is at home";
+        _park = "Car is Parked";
         _length = 0;
       });
     }
@@ -103,6 +105,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
         _distance = "Far";
         _stats = "No";
         _where = "Vehicle is out";
+        _park = "Car is Running";
         _length = 72;
       });
     }
@@ -194,14 +197,24 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                AutoSizeText(
-                  _length.toString(),
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.getFont(
-                    'Lexend Deca',
-                    color: Colors.white,
-                    fontWeight: FontWeight.w100,
-                    fontSize: 92,
+                InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CarParkingWidget(),
+                      ),
+                    );
+                  },
+                  child: AutoSizeText(
+                    _length.toString(),
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.getFont(
+                      'Lexend Deca',
+                      color: Colors.white,
+                      fontWeight: FontWeight.w100,
+                      fontSize: 92,
+                    ),
                   ),
                 ).animated([animationsMap['textOnPageLoadAnimation']])
               ],
@@ -384,7 +397,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'Car is Running',
+                                _park,
                                 style: FlutterFlowTheme.subtitle1.override(
                                   fontFamily: 'Lexend Deca',
                                   color: Colors.white,

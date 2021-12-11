@@ -226,7 +226,7 @@ class _SheNeedsWidgetState extends State<SheNeedsWidget> {
                   ],
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0, 0.8),
+                  alignment: AlignmentDirectional(0, 1),
                   child: SheNeeds1Widget(),
                 )
               ],
