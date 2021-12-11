@@ -5,14 +5,14 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Map1Widget extends StatefulWidget {
-  const Map1Widget({Key key}) : super(key: key);
+class Map2Widget extends StatefulWidget {
+  const Map2Widget({Key key}) : super(key: key);
 
   @override
-  _Map1WidgetState createState() => _Map1WidgetState();
+  _Map2WidgetState createState() => _Map2WidgetState();
 }
 
-class _Map1WidgetState extends State<Map1Widget> {
+class _Map2WidgetState extends State<Map2Widget> {
   LatLng googleMapsCenter;
   Completer<GoogleMapController> googleMapsController;
   TextEditingController textController;
