@@ -15,11 +15,11 @@ class _SheNeeds1WidgetState extends State<SheNeeds1Widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350,
+      width: double.infinity,
       height: 120,
       decoration: BoxDecoration(
         color: Color(0xFF010524),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(0),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.max,
