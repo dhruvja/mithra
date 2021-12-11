@@ -2,10 +2,11 @@ import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../components/theft_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class CarParkingWidget extends StatefulWidget {
   const CarParkingWidget({Key key}) : super(key: key);
@@ -72,7 +73,6 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
   @override
   void initState() {
     super.initState();
-    FirebaseFirestore firestore = FirebaseFirestore.instance;
     startPageLoadAnimations(
       animationsMap.values
           .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
@@ -80,7 +80,16 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
     );
   }
 
-  bool _parked = false;
+//   Future<AudioPlayer> playLocalAsset() async {
+//     AudioCache cache = new AudioCache();
+//    //At the next line, DO NOT pass the entire reference such as assets/yes.mp3. This will not work.
+//    //Just pass the file name only.
+//     return await cache.play("test8.aac"); 
+// }
+
+
+
+  bool _parked = true;
   String _distance = "Far";
   String _stats = "No";
   String _where = "Vehicle is out";
@@ -199,12 +208,14 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
               children: [
                 InkWell(
                   onTap: () async {
-                    await Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CarParkingWidget(),
-                      ),
-                    );
+                    showDialog(
+                              context: context,
+                              builder: (ctx) => AlertDialog(
+                                title: Text("Theft Detected"),
+                                content: TheftWidget()
+                              ),
+                            );
+                          
                   },
                   child: AutoSizeText(
                     _length.toString(),
