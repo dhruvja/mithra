@@ -4,19 +4,19 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Search1CopyWidget extends StatefulWidget {
-  const Search1CopyWidget({Key key}) : super(key: key);
+class SheNeeds1Widget extends StatefulWidget {
+  const SheNeeds1Widget({Key key}) : super(key: key);
 
   @override
-  _Search1CopyWidgetState createState() => _Search1CopyWidgetState();
+  _SheNeeds1WidgetState createState() => _SheNeeds1WidgetState();
 }
 
-class _Search1CopyWidgetState extends State<Search1CopyWidget> {
+class _SheNeeds1WidgetState extends State<SheNeeds1Widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 350,
-      height: 180,
+      height: 120,
       decoration: BoxDecoration(
         color: Color(0xFF010524),
       ),
@@ -24,14 +24,14 @@ class _Search1CopyWidgetState extends State<Search1CopyWidget> {
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
             child: FFButtonWidget(
               onPressed: () {
                 print('Button pressed ...');
               },
               text: 'Record',
               icon: Icon(
-                Icons.search,
+                Icons.record_voice_over,
                 size: 15,
               ),
               options: FFButtonOptions(
