@@ -70,7 +70,7 @@ class _ResultWidgetState extends State<ResultWidget> {
                           controller: textController1,
                           obscureText: false,
                           decoration: InputDecoration(
-                            hintText: 'Name',
+                            hintText: 'Aruna Hospital',
                             hintStyle: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                               color: FlutterFlowTheme.tertiaryColor,
@@ -94,6 +94,10 @@ class _ResultWidgetState extends State<ResultWidget> {
                                 topLeft: Radius.circular(4.0),
                                 topRight: Radius.circular(4.0),
                               ),
+                            ),
+                            prefixIcon: Icon(
+                              Icons.call,
+                              color: Color(0xFF22FFE3),
                             ),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
@@ -111,7 +115,7 @@ class _ResultWidgetState extends State<ResultWidget> {
                           controller: textController2,
                           obscureText: false,
                           decoration: InputDecoration(
-                            hintText: 'Type',
+                            hintText: 'Noursing home',
                             hintStyle: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                               color: FlutterFlowTheme.tertiaryColor,
@@ -135,6 +139,10 @@ class _ResultWidgetState extends State<ResultWidget> {
                                 topLeft: Radius.circular(4.0),
                                 topRight: Radius.circular(4.0),
                               ),
+                            ),
+                            prefixIcon: Icon(
+                              Icons.local_hospital,
+                              color: FlutterFlowTheme.tertiaryColor,
                             ),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
@@ -152,10 +160,10 @@ class _ResultWidgetState extends State<ResultWidget> {
                           controller: textController3,
                           obscureText: false,
                           decoration: InputDecoration(
-                            hintText: 'Vicinity',
+                            hintText: 'Near High school field',
                             hintStyle: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
-                              color: FlutterFlowTheme.tertiaryColor,
+                              color: Color(0xFFF1C20C),
                             ),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
@@ -177,10 +185,14 @@ class _ResultWidgetState extends State<ResultWidget> {
                                 topRight: Radius.circular(4.0),
                               ),
                             ),
+                            prefixIcon: Icon(
+                              Icons.play_for_work,
+                              color: FlutterFlowTheme.tertiaryColor,
+                            ),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
-                            color: FlutterFlowTheme.tertiaryColor,
+                            color: Color(0xFFF1C20C),
                           ),
                         ),
                       ),
