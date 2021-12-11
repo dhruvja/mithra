@@ -1,6 +1,9 @@
+import '../car_parking/car_parking_widget.dart';
 import '../components/search_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../map3/map3_widget.dart';
+import '../she_needs/she_needs_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -51,33 +54,43 @@ class _HomeWidgetState extends State<HomeWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                        child: Container(
-                          width: 150,
-                          height: 150,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.tertiaryColor,
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: Image.asset(
-                                'assets/images/mcatd_1.png',
-                              ).image,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0x000F044C),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
+                        child: InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Map3Widget(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            width: 150,
+                            height: 150,
+                            decoration: BoxDecoration(
                               color: FlutterFlowTheme.tertiaryColor,
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: Image.asset(
+                                  'assets/images/mcatd_1.png',
+                                ).image,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color(0x000F044C),
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(
+                                color: FlutterFlowTheme.tertiaryColor,
+                              ),
                             ),
-                          ),
-                          child: Align(
-                            alignment: AlignmentDirectional(0, 1),
-                            child: AutoSizeText(
-                              'Emergency',
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.bodyText1,
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 1),
+                              child: AutoSizeText(
+                                'Emergency',
+                                textAlign: TextAlign.center,
+                                style: FlutterFlowTheme.bodyText1,
+                              ),
                             ),
                           ),
                         ),
@@ -137,33 +150,43 @@ class _HomeWidgetState extends State<HomeWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                        child: Container(
-                          width: 150,
-                          height: 150,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.tertiaryColor,
-                            image: DecorationImage(
-                              fit: BoxFit.fill,
-                              image: Image.asset(
-                                'assets/images/albfo_3.png',
-                              ).image,
+                        child: InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CarParkingWidget(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            width: 150,
+                            height: 150,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.tertiaryColor,
+                              image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: Image.asset(
+                                  'assets/images/albfo_3.png',
+                                ).image,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color(0xFF0F044C),
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(
+                                color: Color(0x00161853),
+                              ),
                             ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0xFF0F044C),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: Color(0x00161853),
-                            ),
-                          ),
-                          child: Align(
-                            alignment: AlignmentDirectional(0, 1),
-                            child: Text(
-                              'My Vehicle',
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.bodyText1,
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 1),
+                              child: Text(
+                                'My Vehicle',
+                                textAlign: TextAlign.center,
+                                style: FlutterFlowTheme.bodyText1,
+                              ),
                             ),
                           ),
                         ),
@@ -175,35 +198,45 @@ class _HomeWidgetState extends State<HomeWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                        child: Container(
-                          width: 150,
-                          height: 150,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.tertiaryColor,
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: Image.asset(
-                                'assets/images/No_way_for_Ambulance_(1).png',
-                              ).image,
+                        child: InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SheNeedsWidget(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            width: 150,
+                            height: 150,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.tertiaryColor,
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: Image.asset(
+                                  'assets/images/No_way_for_Ambulance_(1).png',
+                                ).image,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color(0xFF0F044C),
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(
+                                color: Color(0x00161853),
+                              ),
                             ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0xFF0F044C),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: Color(0x00161853),
-                            ),
-                          ),
-                          alignment:
-                              AlignmentDirectional(0, 0.6499999999999999),
-                          child: Align(
-                            alignment: AlignmentDirectional(0, 1),
-                            child: Text(
-                              'SHE needs',
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.bodyText1,
+                            alignment:
+                                AlignmentDirectional(0, 0.6499999999999999),
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 1),
+                              child: Text(
+                                'SHE needs',
+                                textAlign: TextAlign.center,
+                                style: FlutterFlowTheme.bodyText1,
+                              ),
                             ),
                           ),
                         ),
