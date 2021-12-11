@@ -5,21 +5,23 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SearchWidget extends StatefulWidget {
-  const SearchWidget({Key key}) : super(key: key);
+class SearchCopyWidget extends StatefulWidget {
+  const SearchCopyWidget({Key key}) : super(key: key);
 
   @override
-  _SearchWidgetState createState() => _SearchWidgetState();
+  _SearchCopyWidgetState createState() => _SearchCopyWidgetState();
 }
 
-class _SearchWidgetState extends State<SearchWidget> {
+class _SearchCopyWidgetState extends State<SearchCopyWidget> {
   String dropDownValue;
-  TextEditingController textController;
+  TextEditingController textController1;
+  TextEditingController textController2;
 
   @override
   void initState() {
     super.initState();
-    textController = TextEditingController();
+    textController1 = TextEditingController();
+    textController2 = TextEditingController();
   }
 
   @override
@@ -49,10 +51,10 @@ class _SearchWidgetState extends State<SearchWidget> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
                       child: TextFormField(
-                        controller: textController,
+                        controller: textController1,
                         obscureText: false,
                         decoration: InputDecoration(
-                          hintText: 'Search ',
+                          hintText: '[Some hint text...]',
                           hintStyle: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
                             color: FlutterFlowTheme.tertiaryColor,
@@ -85,14 +87,7 @@ class _SearchWidgetState extends State<SearchWidget> {
                       ),
                     ),
                     FlutterFlowDropDown(
-                      options: [
-                        'Service',
-                        'Hospital',
-                        'Electric Station',
-                        'Medical shops',
-                        'Petrol Bunks',
-                        ''
-                      ].toList(),
+                      options: ['Service'].toList(),
                       onChanged: (val) => setState(() => dropDownValue = val),
                       width: 220,
                       height: 50,
@@ -109,28 +104,39 @@ class _SearchWidgetState extends State<SearchWidget> {
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                      child: FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
-                        },
-                        text: 'Location',
-                        icon: Icon(
-                          Icons.edit_location,
-                          size: 15,
-                        ),
-                        options: FFButtonOptions(
-                          width: 300,
-                          height: 40,
-                          color: Color(0x003474E0),
-                          textStyle: FlutterFlowTheme.subtitle2.override(
+                      child: TextFormField(
+                        controller: textController2,
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          hintText: '[Some hint text...]',
+                          hintStyle: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
-                            color: Colors.white,
-                          ),
-                          borderSide: BorderSide(
                             color: FlutterFlowTheme.tertiaryColor,
-                            width: 1,
                           ),
-                          borderRadius: 0,
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.tertiaryColor,
+                              width: 1,
+                            ),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(4.0),
+                              topRight: Radius.circular(4.0),
+                            ),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.tertiaryColor,
+                              width: 1,
+                            ),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(4.0),
+                              topRight: Radius.circular(4.0),
+                            ),
+                          ),
+                        ),
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                          color: FlutterFlowTheme.tertiaryColor,
                         ),
                       ),
                     ),
@@ -138,7 +144,7 @@ class _SearchWidgetState extends State<SearchWidget> {
                       onPressed: () {
                         print('Button pressed ...');
                       },
-                      text: 'Search',
+                      text: 'Button',
                       options: FFButtonOptions(
                         width: 130,
                         height: 40,

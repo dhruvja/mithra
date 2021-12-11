@@ -80,13 +80,32 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
     );
   }
 
-  bool _parked = true;
+  bool _parked = false;
   String _distance = "Far";
+  String _stats = "Yes";
+  String _where = "Vehicle is out";
+  int _length = 72;
+
 
   void Revert(){
-    setState((){
-      _parked = !_parked;
-    });
+    if(_parked == true){
+      setState(() {
+        _parked = !_parked;
+        _distance = "Home";
+        _stats = "Yes";
+        _where = "Vehicle is at home";
+        _length = 0;
+      });
+    }
+    else{
+      setState(() {
+        _parked = !_parked;
+        _distance = "Far";
+        _stats = "No";
+        _where = "Vehicle is out";
+        _length = 72;
+      });
+    }
   }
 
   @override
@@ -166,7 +185,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 AutoSizeText(
-                  '72',
+                  _length.toString(),
                   textAlign: TextAlign.center,
                   style: GoogleFonts.getFont(
                     'Lexend Deca',
@@ -184,7 +203,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   AutoSizeText(
-                    'MPH',
+                    'Hours',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.subtitle2.override(
                       fontFamily: 'Lexend Deca',
@@ -203,7 +222,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   AutoSizeText(
-                    'Battery Status',
+                    _where,
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.subtitle2.override(
                       fontFamily: 'Lexend Deca',
@@ -257,7 +276,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                         child: Text(
-                          'Charge',
+                          "Parked",
                           style: FlutterFlowTheme.bodyText2.override(
                             fontFamily: 'Lexend Deca',
                             color: Color(0xFF8B97A2),
@@ -267,7 +286,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                         ),
                       ),
                       Text(
-                        '70%',
+                        _stats,
                         style: FlutterFlowTheme.title1.override(
                           fontFamily: 'Lexend Deca',
                           color: Colors.white,
@@ -294,7 +313,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                         ),
                       ),
                       Text(
-                        '329m',
+                        _distance,
                         style: FlutterFlowTheme.title1.override(
                           fontFamily: 'Lexend Deca',
                           color: Colors.white,
@@ -368,7 +387,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16, 8, 16, 0),
                                   child: Text(
-                                    'Put your car in park in order to turn your car off.',
+                                    'Park your vechile in stimulated location',
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Lexend Deca',
                                       color: Color(0xB3FFFFFF),
