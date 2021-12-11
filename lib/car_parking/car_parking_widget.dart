@@ -163,14 +163,24 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                AutoSizeText(
-                  '72',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.getFont(
-                    'Lexend Deca',
-                    color: Colors.white,
-                    fontWeight: FontWeight.w100,
-                    fontSize: 92,
+                InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CarParkingWidget(),
+                      ),
+                    );
+                  },
+                  child: AutoSizeText(
+                    '72',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.getFont(
+                      'Lexend Deca',
+                      color: Colors.white,
+                      fontWeight: FontWeight.w100,
+                      fontSize: 92,
+                    ),
                   ),
                 ).animated([animationsMap['textOnPageLoadAnimation']])
               ],
