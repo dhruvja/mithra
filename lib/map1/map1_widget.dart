@@ -110,7 +110,7 @@ class _Map1WidgetState extends State<Map1Widget> {
                           controller: googleMapsController,
                           onCameraIdle: (latLng) => googleMapsCenter = latLng,
                           initialLocation: googleMapsCenter ??=
-                              LatLng(13.106061, -59.613158),
+                              LatLng(37.106061, -122.613158),
                           markerColor: GoogleMarkerColor.violet,
                           mapType: MapType.normal,
                           style: GoogleMapStyle.standard,

@@ -5,6 +5,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class CarParkingWidget extends StatefulWidget {
   const CarParkingWidget({Key key}) : super(key: key);
@@ -67,14 +68,25 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
   };
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
+
   @override
   void initState() {
     super.initState();
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
     startPageLoadAnimations(
       animationsMap.values
           .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
       this,
     );
+  }
+
+  bool _parked = true;
+  String _distance = "Far";
+
+  void Revert(){
+    setState((){
+      _parked = !_parked;
+    });
   }
 
   @override
@@ -132,11 +144,11 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                       buttonSize: 46,
                       icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
-                        color: Colors.white,
+                        color: Colors.transparent,
                         size: 24,
                       ),
                       onPressed: () async {
-                        Navigator.pop(context);
+                        Revert();
                       },
                     ),
                   )
@@ -377,8 +389,19 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                     child: Container(
                       width: 80,
                       height: 80,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFDF3F3F),
+                      decoration: _parked == true ? BoxDecoration(
+                        color: Colors.red,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 7,
+                            color: Color(0x8E000000),
+                            offset: Offset(0, 3),
+                          )
+                        ],
+                        shape: BoxShape.circle,
+                      ) : 
+                      BoxDecoration(
+                        color: Colors.green,
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 7,

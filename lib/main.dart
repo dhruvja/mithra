@@ -9,6 +9,9 @@ import 'package:mitra/dashboard/dashboard_widget.dart';
 import 'package:mitra/home/home_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import './map1/map1_widget.dart';
+import './home_page/home_page_widget.dart';
+import './car_parking/car_parking_widget.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -59,7 +62,7 @@ class _MyAppState extends State<MyApp> {
             )
           : currentUser.loggedIn
               ? HomeWidget()
-              : DashboardWidget(),
+              : CarParkingWidget(),
     );
   }
 }
