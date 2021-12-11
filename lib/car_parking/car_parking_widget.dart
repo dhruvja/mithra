@@ -143,11 +143,21 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                 ],
               ),
             ),
-            Image.asset(
-              'assets/images/carFull@2x.png',
-              width: MediaQuery.of(context).size.width,
-              height: 200,
-              fit: BoxFit.cover,
+            InkWell(
+              onTap: () async {
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CarParkingWidget(),
+                  ),
+                );
+              },
+              child: Image.asset(
+                'assets/images/carFull@2x.png',
+                width: MediaQuery.of(context).size.width,
+                height: 200,
+                fit: BoxFit.cover,
+              ),
             ).animated([animationsMap['imageOnPageLoadAnimation']]),
             Row(
               mainAxisSize: MainAxisSize.max,
