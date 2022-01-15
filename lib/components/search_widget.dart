@@ -153,12 +153,12 @@ class _SearchWidgetState extends State<SearchWidget> {
                         ),
                         borderRadius: 12,
                       ),
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
-          )
+          ),
         ],
       ),
     );

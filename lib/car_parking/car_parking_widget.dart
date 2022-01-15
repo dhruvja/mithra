@@ -20,49 +20,105 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
-      slideOffset: Offset(0, -39),
+      initialState: AnimationState(
+        offset: Offset(0, 39),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
     'textOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
-      slideOffset: Offset(0, -51),
+      initialState: AnimationState(
+        offset: Offset(0, 51),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
     'rowOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
-      slideOffset: Offset(0, -60),
+      initialState: AnimationState(
+        offset: Offset(0, 60),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
     'rowOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
-      slideOffset: Offset(0, -51),
+      initialState: AnimationState(
+        offset: Offset(0, 51),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
     'rowOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
-      slideOffset: Offset(0, -58),
+      initialState: AnimationState(
+        offset: Offset(0, 58),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
     'rowOnPageLoadAnimation4': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
-      slideOffset: Offset(0, -60),
+      initialState: AnimationState(
+        offset: Offset(0, 60),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
     'stackOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
-      slideOffset: Offset(0, -78),
+      initialState: AnimationState(
+        offset: Offset(0, 78),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
     'containerOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
-      slideOffset: Offset(0, -29),
+      initialState: AnimationState(
+        offset: Offset(0, 29),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
   };
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -100,7 +156,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                       fontSize: 14,
                       fontWeight: FontWeight.normal,
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -139,7 +195,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                         Navigator.pop(context);
                       },
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -182,7 +238,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                       fontSize: 92,
                     ),
                   ),
-                ).animated([animationsMap['textOnPageLoadAnimation']])
+                ).animated([animationsMap['textOnPageLoadAnimation']]),
               ],
             ),
             Padding(
@@ -200,7 +256,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                     ),
-                  )
+                  ),
                 ],
               ).animated([animationsMap['rowOnPageLoadAnimation1']]),
             ),
@@ -219,7 +275,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                     ),
-                  )
+                  ),
                 ],
               ).animated([animationsMap['rowOnPageLoadAnimation2']]),
             ),
@@ -247,9 +303,9 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
             ).animated([animationsMap['rowOnPageLoadAnimation3']]),
             Padding(
@@ -282,7 +338,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                         ),
-                      )
+                      ),
                     ],
                   ),
                   Column(
@@ -309,7 +365,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                         ),
-                      )
+                      ),
                     ],
                   ),
                   Column(
@@ -336,9 +392,9 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                         ),
-                      )
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ).animated([animationsMap['rowOnPageLoadAnimation4']]),
             ),
@@ -385,7 +441,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                                     ),
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
@@ -414,10 +470,10 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                         size: 50,
                       ),
                     ).animated([animationsMap['containerOnPageLoadAnimation']]),
-                  )
+                  ),
                 ],
               ),
-            ).animated([animationsMap['stackOnPageLoadAnimation']])
+            ).animated([animationsMap['stackOnPageLoadAnimation']]),
           ],
         ),
       ),

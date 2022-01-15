@@ -73,7 +73,7 @@ class _TheftWidgetState extends State<TheftWidget> {
                 borderRadius: 0,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

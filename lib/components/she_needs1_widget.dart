@@ -77,7 +77,7 @@ class _SheNeeds1WidgetState extends State<SheNeeds1Widget> {
                 borderRadius: 12,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

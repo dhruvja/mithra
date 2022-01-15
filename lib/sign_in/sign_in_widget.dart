@@ -68,7 +68,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
                 Padding(
@@ -396,7 +396,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                     ),
                     borderRadius: 12,
                   ),
-                )
+                ),
               ],
             ),
           ),

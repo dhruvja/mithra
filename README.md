@@ -1,4 +1,4 @@
-# mitra
+# Mitra
 
 A new Flutter project.
 

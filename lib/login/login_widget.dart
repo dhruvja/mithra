@@ -110,7 +110,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 color: Colors.white,
                                 size: 24,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -181,7 +181,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 color: Colors.white,
                                 size: 24,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -269,7 +269,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 borderRadius: 0,
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -280,10 +280,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                         color: Color(0xFF676767),
                         fontSize: 16,
                       ),
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

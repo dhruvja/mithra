@@ -27,6 +27,10 @@ abstract class CarsRecord implements Built<CarsRecord, CarsRecordBuilder> {
       .snapshots()
       .map((s) => serializers.deserializeWith(serializer, serializedData(s)));
 
+  static Future<CarsRecord> getDocumentOnce(DocumentReference ref) => ref
+      .get()
+      .then((s) => serializers.deserializeWith(serializer, serializedData(s)));
+
   CarsRecord._();
   factory CarsRecord([void Function(CarsRecordBuilder) updates]) = _$CarsRecord;
 

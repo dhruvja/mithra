@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class DashboardWidget extends StatefulWidget {
-  const DashboardWidget({Key key}) : super(key: key);
+class LandingPageWidget extends StatefulWidget {
+  const LandingPageWidget({Key key}) : super(key: key);
 
   @override
-  _DashboardWidgetState createState() => _DashboardWidgetState();
+  _LandingPageWidgetState createState() => _LandingPageWidgetState();
 }
 
-class _DashboardWidgetState extends State<DashboardWidget> {
+class _LandingPageWidgetState extends State<LandingPageWidget> {
   PageController pageViewController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -62,7 +62,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                         height: 400,
                                         fit: BoxFit.cover,
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                                 Padding(
@@ -79,7 +79,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                           fontSize: 32,
                                           fontWeight: FontWeight.bold,
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -100,7 +100,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                             fontWeight: FontWeight.w500,
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -144,10 +144,10 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                             borderRadius: 12,
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -174,7 +174,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                         height: 400,
                                         fit: BoxFit.fitWidth,
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                                 Padding(
@@ -191,7 +191,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                           fontSize: 32,
                                           fontWeight: FontWeight.bold,
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -212,7 +212,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                             fontWeight: FontWeight.w500,
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -231,7 +231,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    DashboardWidget(),
+                                                    LandingPageWidget(),
                                               ),
                                             );
                                           },
@@ -256,10 +256,10 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                             borderRadius: 12,
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -286,7 +286,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                         height: 400,
                                         fit: BoxFit.cover,
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                                 Padding(
@@ -303,7 +303,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                           fontSize: 32,
                                           fontWeight: FontWeight.bold,
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -324,7 +324,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                             fontWeight: FontWeight.normal,
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -362,13 +362,13 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                             borderRadius: 12,
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
-                                )
+                                ),
                               ],
                             ),
-                          )
+                          ),
                         ],
                       ),
                       Align(
@@ -403,9 +403,9 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                     ],
                   ),
                 ),
-              )
+              ),
             ],
-          )
+          ),
         ],
       ),
     );

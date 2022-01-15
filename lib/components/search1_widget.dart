@@ -59,7 +59,7 @@ class _Search1WidgetState extends State<Search1Widget> {
                           margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
                           hidesUnderline: true,
                         ),
-                      )
+                      ),
                     ],
                   ),
                   Column(
@@ -91,11 +91,11 @@ class _Search1WidgetState extends State<Search1Widget> {
                           margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
                           hidesUnderline: true,
                         ),
-                      )
+                      ),
                     ],
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
           FFButtonWidget(
@@ -148,7 +148,7 @@ class _Search1WidgetState extends State<Search1Widget> {
                 borderRadius: 12,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

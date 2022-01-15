@@ -106,7 +106,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 ),
                 borderRadius: 12,
               ),
-            )
+            ),
           ],
         ),
       ),

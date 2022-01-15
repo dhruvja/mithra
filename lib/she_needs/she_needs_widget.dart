@@ -59,7 +59,7 @@ class _SheNeedsWidgetState extends State<SheNeedsWidget> {
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
                             ),
-                          )
+                          ),
                         ],
                       ),
                       Row(
@@ -76,13 +76,13 @@ class _SheNeedsWidgetState extends State<SheNeedsWidget> {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                          )
+                          ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
           Expanded(
@@ -214,22 +214,22 @@ class _SheNeedsWidgetState extends State<SheNeedsWidget> {
                                       size: 24,
                                     ),
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
                 Align(
                   alignment: AlignmentDirectional(0, 1),
                   child: SheNeeds1Widget(),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

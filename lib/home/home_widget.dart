@@ -1,8 +1,8 @@
+import '../ambulance/ambulance_widget.dart';
 import '../car_parking/car_parking_widget.dart';
 import '../components/search_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../map3/map3_widget.dart';
 import '../she_needs/she_needs_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +48,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                       color: Color(0x00EEEEEE),
                     ),
                     child: SearchWidget(),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -69,7 +69,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Map3Widget(),
+                                builder: (context) => AmbulanceWidget(),
                               ),
                             );
                           },
@@ -104,7 +104,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   Column(
@@ -142,9 +142,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -200,7 +200,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   Column(
@@ -250,12 +250,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

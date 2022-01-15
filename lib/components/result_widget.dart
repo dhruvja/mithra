@@ -55,7 +55,7 @@ class _ResultWidgetState extends State<ResultWidget> {
                         height: 100,
                         fit: BoxFit.cover,
                       ),
-                    )
+                    ),
                   ],
                 ),
                 Column(
@@ -196,9 +196,9 @@ class _ResultWidgetState extends State<ResultWidget> {
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),
@@ -225,7 +225,7 @@ class _ResultWidgetState extends State<ResultWidget> {
               ),
               borderRadius: 12,
             ),
-          )
+          ),
         ],
       ),
     );
