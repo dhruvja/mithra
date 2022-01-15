@@ -1,6 +1,6 @@
 import '../ambulance/ambulance_widget.dart';
 import '../car_parking/car_parking_widget.dart';
-import '../components/search_widget.dart';
+import '../components/home_component_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../she_needs/she_needs_widget.dart';
@@ -22,36 +22,13 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.primaryColor,
-        automaticallyImplyLeading: true,
-        actions: [],
-        centerTitle: true,
-        elevation: 4,
-      ),
       backgroundColor: FlutterFlowTheme.tertiaryColor,
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 330,
-                    height: 280,
-                    decoration: BoxDecoration(
-                      color: Color(0x00EEEEEE),
-                    ),
-                    child: SearchWidget(),
-                  ),
-                ],
-              ),
-            ),
+            HomeComponentWidget(),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
               child: Row(

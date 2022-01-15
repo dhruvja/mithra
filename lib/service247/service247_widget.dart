@@ -98,8 +98,7 @@ class _Service247WidgetState extends State<Service247Widget> {
                       decoration: BoxDecoration(),
                       child: FlutterFlowGoogleMap(
                         controller: googleMapsController,
-                        onCameraIdle: (latLng) =>
-                            setState(() => googleMapsCenter = latLng),
+                        onCameraIdle: (latLng) => googleMapsCenter = latLng,
                         initialLocation: googleMapsCenter ??=
                             LatLng(13.106061, -59.613158),
                         markerColor: GoogleMarkerColor.violet,
@@ -111,7 +110,7 @@ class _Service247WidgetState extends State<Service247Widget> {
                         showZoomControls: true,
                         showLocation: true,
                         showCompass: false,
-                        showMapToolbar: true,
+                        showMapToolbar: false,
                         showTraffic: false,
                         centerMapOnMarkerTap: true,
                       ),
