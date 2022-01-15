@@ -69,7 +69,6 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
   };
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-
   @override
   void initState() {
     super.initState();
@@ -84,10 +83,8 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
 //     AudioCache cache = new AudioCache();
 //    //At the next line, DO NOT pass the entire reference such as assets/yes.mp3. This will not work.
 //    //Just pass the file name only.
-//     return await cache.play("test8.aac"); 
+//     return await cache.play("test8.aac");
 // }
-
-
 
   bool _parked = true;
   String _distance = "Far";
@@ -96,9 +93,8 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
   String _park = "Car is Running";
   int _length = 0;
 
-
-  void Revert(){
-    if(_parked == true){
+  void Revert() {
+    if (_parked == true) {
       setState(() {
         _parked = !_parked;
         _distance = "Home";
@@ -107,8 +103,7 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
         _park = "Car is Parked";
         _length = 0;
       });
-    }
-    else{
+    } else {
       setState(() {
         _parked = !_parked;
         _distance = "Far";
@@ -209,13 +204,12 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                 InkWell(
                   onTap: () async {
                     showDialog(
-                              context: context,
-                              builder: (ctx) => AlertDialog(
-                                title: Text("Theft Detected"),
-                                content: TheftWidget()
-                              ),
-                            );
-                          
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                        title: Text("Theft Detected"),
+                        content: TheftWidget(),
+                      ),
+                    );
                   },
                   child: AutoSizeText(
                     _length.toString(),
@@ -442,28 +436,29 @@ class _CarParkingWidgetState extends State<CarParkingWidget>
                     child: Container(
                       width: 80,
                       height: 80,
-                      decoration: _parked == true ? BoxDecoration(
-                        color: Colors.red,
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 7,
-                            color: Color(0x8E000000),
-                            offset: Offset(0, 3),
-                          )
-                        ],
-                        shape: BoxShape.circle,
-                      ) : 
-                      BoxDecoration(
-                        color: Colors.green,
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 7,
-                            color: Color(0x8E000000),
-                            offset: Offset(0, 3),
-                          )
-                        ],
-                        shape: BoxShape.circle,
-                      ),
+                      decoration: _parked == true
+                          ? BoxDecoration(
+                              color: Colors.red,
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 7,
+                                  color: Color(0x8E000000),
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                              shape: BoxShape.circle,
+                            )
+                          : BoxDecoration(
+                              color: Colors.green,
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 7,
+                                  color: Color(0x8E000000),
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                              shape: BoxShape.circle,
+                            ),
                       child: Icon(
                         Icons.power_settings_new_rounded,
                         color: Colors.white,

@@ -19,7 +19,7 @@ class _TheftWidgetState extends State<TheftWidget> {
       width: 400,
       height: 400,
       decoration: BoxDecoration(
-        color: Color(0xFFEEEEEE),
+        color: Colors.white,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.max,
@@ -35,7 +35,7 @@ class _TheftWidgetState extends State<TheftWidget> {
             onPressed: () {
               print('Button pressed ...');
             },
-            text: 'Yes it\'s me',
+            text: "Yes it's me",
             options: FFButtonOptions(
               width: 130,
               height: 40,
@@ -57,7 +57,7 @@ class _TheftWidgetState extends State<TheftWidget> {
               onPressed: () {
                 print('Button pressed ...');
               },
-              text: 'It\'s not me',
+              text: "It's not me",
               options: FFButtonOptions(
                 width: 130,
                 height: 40,

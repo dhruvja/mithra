@@ -2,6 +2,7 @@ import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../sign_in/sign_in_widget.dart';
 import '../home/home_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -219,7 +220,7 @@ class _LoginWidgetState extends State<LoginWidget> {
 
                               
                             },
-                            text: 'Sign up',
+                            text: 'Sign in',
                             options: FFButtonOptions(
                               width: 125,
                               height: 40,
@@ -242,24 +243,17 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 EdgeInsetsDirectional.fromSTEB(35, 0, 0, 0),
                             child: FFButtonWidget(
                               onPressed: () async {
-                                final user = await signInWithEmail(
-                                  context,
-                                  emailTextController.text,
-                                  passwordTextController.text,
-                                );
-                                if (user == null) {
-                                  return;
-                                }
+                                await Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    SignInWidget(),
+                                              ),
+                                            );
 
-                                await Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HomeWidget(),
-                                  ),
-                                  (r) => false,
-                                );
+                                
                               },
-                              text: 'Sign in',
+                              text: 'Sign Up',
                               options: FFButtonOptions(
                                 width: 125,
                                 height: 40,

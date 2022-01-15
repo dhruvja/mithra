@@ -100,7 +100,7 @@ class _Search24WidgetState extends State<Search24Widget> {
                         fontFamily: 'Poppins',
                         color: FlutterFlowTheme.tertiaryColor,
                       ),
-                      fillColor: Color(0x00FFFFFF),
+                      fillColor: Color(0xFF161853),
                       elevation: 2,
                       borderColor: Color(0x00FFFFFF),
                       borderWidth: 0,

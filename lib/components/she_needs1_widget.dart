@@ -9,7 +9,7 @@ import 'package:intl/date_symbol_data_file.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
-import 'package:intl/intl.dart' show Date, DateFormat ;
+import 'package:intl/intl.dart' show Date, DateFormat;
 import 'dart:async';
 import 'dart:io';
 
@@ -21,8 +21,7 @@ class SheNeeds1Widget extends StatefulWidget {
 }
 
 class _SheNeeds1WidgetState extends State<SheNeeds1Widget> {
-
-var _location_message = "";
+  var _location_message = "";
   String _recorderText = "";
 
   FlutterSoundRecorder _recorder;
@@ -31,35 +30,30 @@ var _location_message = "";
   bool _recordStatus = false;
   String _recordName = "Record";
 
-  void startIt() async{
+  void startIt() async {
     filepath = "/Users/Deepak/Documents";
 
     _recorder = FlutterSoundRecorder();
-    
-    
+
     // await initializeDateFormatting();
 
     final status = await Permission.microphone.request();
-    if(status!= PermissionStatus.granted){
+    if (status != PermissionStatus.granted) {
       print("Microphone permission not granted $status");
-    }
-    else
+    } else
       print("Microphone access granted $status");
     await Permission.storage.request();
 
     await _recorder.openAudioSession(
-      focus: AudioFocus.requestFocusAndStopOthers,
-      category: SessionCategory.playAndRecord,
-      mode: SessionMode.modeDefault,
-      device: AudioDevice.speaker
-    );
+        focus: AudioFocus.requestFocusAndStopOthers,
+        category: SessionCategory.playAndRecord,
+        mode: SessionMode.modeDefault,
+        device: AudioDevice.speaker);
 
     await _recorder.setSubscriptionDuration(Duration(milliseconds: 10));
-
-
   }
 
-  int x = 0; 
+  int x = 0;
 
   Future<String> getFilePath() async {
     int i = 8;
@@ -72,43 +66,51 @@ var _location_message = "";
     return sdPath + "/test_${i++}.aac";
   }
 
-  Future<void> record() async{
+  Future<void> record() async {
     // Directory dir = Directory(path.dirname(filepath));
     // if(!dir.existsSync()){
     //   dir.createSync();
     // }
 
-    _recorder.openAudioSession();
+    final status = await Permission.microphone.request();
+    if (status != PermissionStatus.granted) {
+      print("Microphone permission not granted $status");
+    } else {
+      print("Microphone access granted $status");
+      _recorder.openAudioSession();
 
-    filepath = await getFilePath();
+      filepath = await getFilePath();
 
-    _recorder.startRecorder(
-      toFile: filepath,
-    );
+      _recorder.startRecorder(
+        toFile: filepath,
+      );
 
-    print("Recording $x++");
-    setState((){
-      _recordStatus = true;
-      _recordName = "Stop Record";
-    });
-
-    StreamSubscription _recorderSubscription = _recorder.onProgress.listen((e){
-      var date = DateTime.fromMillisecondsSinceEpoch(e.duration.inMilliseconds,isUtc: true);
-      var txt = DateFormat('mm:ss:SS','en_GB').format(date);
-      // initializeDateFormatting();
-      setState((){
-        _recorderText = "Recording" ; 
+      print("Recording $x++");
+      setState(() {
+        _recordStatus = true;
+        _recordName = "Stop Record";
       });
 
-    });
-    _recorderSubscription.cancel();
+      StreamSubscription _recorderSubscription =
+          _recorder.onProgress.listen((e) {
+        var date = DateTime.fromMillisecondsSinceEpoch(
+            e.duration.inMilliseconds,
+            isUtc: true);
+        var txt = DateFormat('mm:ss:SS', 'en_GB').format(date);
+        // initializeDateFormatting();
+        setState(() {
+          _recorderText = "Recording";
+        });
+      });
+      _recorderSubscription.cancel();
+    }
   }
 
-  Future stopIt() async{
+  Future stopIt() async {
     _recorder.closeAudioSession();
     print("Stopped");
     await _recorder.stopRecorder();
-    setState((){
+    setState(() {
       _recordStatus = false;
       _recordName = "Audio has been uploaded";
     });
@@ -120,51 +122,44 @@ var _location_message = "";
   //   return File(path);
   // }
 
-  void uploadAudio() async{
+  void uploadAudio() async {
     var filePath = await getFilePath();
-    const url = "http://localhost:5000/api/uploadAudio";
-    var request = http.MultipartRequest('POST',Uri.parse(url));
-    request.files.add(
-      http.MultipartFile(
-        'audio',
-        File(filePath).readAsBytes().asStream(),
-        File(filepath).lengthSync(),
-        filename: filePath.split('/').last
-      )
-    );
+    const url = "http://192.168.0.192:5000/api/uploadAudio";
+    var request = http.MultipartRequest('POST', Uri.parse(url));
+    request.files.add(http.MultipartFile('audio',
+        File(filePath).readAsBytes().asStream(), File(filepath).lengthSync(),
+        filename: filePath.split('/').last));
     var res = await request.send();
   }
 
-  
-
-
-
-  void getLocation() async{
+  void getLocation() async {
     var file = await getFilePath();
     LocationPermission permission = await Geolocator.checkPermission();
-    if(permission == LocationPermission.denied || permission == LocationPermission.deniedForever){
+    if (permission == LocationPermission.denied ||
+        permission == LocationPermission.deniedForever) {
       print("Permission not given");
       LocationPermission asked = await Geolocator.requestPermission();
-    }
-    else{
-      Position currentPosition = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.best);
+    } else {
+      Position currentPosition = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.best);
       Position lastPosition = await Geolocator.getLastKnownPosition();
       print(" latitude: " + currentPosition.latitude.toString());
       print(" longitude: " + currentPosition.longitude.toString());
-      setState((){
-        _location_message = currentPosition.latitude.toString() + ", " + currentPosition.longitude.toString();
+      setState(() {
+        _location_message = currentPosition.latitude.toString() +
+            ", " +
+            currentPosition.longitude.toString();
       });
-
     }
     print(file);
   }
 
   // ignore: must_call_super
-  void initState(){
+  void initState() {
     startIt();
+    getLocation();
     super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -183,7 +178,7 @@ var _location_message = "";
             child: FFButtonWidget(
               onPressed: () {
                 print('Record Button pressed ...');
-                if(_recordStatus == false)
+                if (_recordStatus == false)
                   record();
                 else
                   stopIt();
